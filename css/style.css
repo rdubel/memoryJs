@@ -1,0 +1,29 @@
+ul {
+    list-style: none;
+    padding: 2em;
+    width: 45%;
+    margin: 3em auto;
+    background-color: rgb(7, 148, 0);
+    border: 1.5em solid rgb(172, 77, 0);
+    border-radius: 10px;
+}
+
+li {
+    padding: 2em;
+    box-sizing: border-box;
+    background: linear-gradient(45deg, rgb(0, 41, 255), rgb(255, 138, 0));
+    display: inline-block;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 75px;
+    height: 100px;
+    margin: 0.5em;
+    text-align: center;
+    vertical-align: top;
+    font-weight: bold;
+}
+
+li.revealed {
+    background: none;
+    background-color: white;
+}

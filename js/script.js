@@ -1,9 +1,37 @@
 var container = document.getElementById("board");
-var revealed;
+var card1 = null;
+var card2 = null;
 
 function reveal(card) {
     card.className = "revealed";
     card.innerHTML = card.value;
+    if(card1 == null) {
+        card1 = card;
+        card1.onclick = null;
+    } else if(card2 == null) {
+        card2 = card;
+        card2.onclick = null;
+    }
+    else if (card1.value == card2.value){
+        card1 = card;
+        card2 = null;
+        card1.onclick = null;
+    }
+    else {
+        card1.className = "";
+        card2.className = "";
+        card1.innerHTML = "";
+        card2.innerHTML = "";
+        card1.onclick = function() {
+            reveal(this);
+        }
+        card2.onclick = function() {
+            reveal(this);
+        }
+        card1 = card;
+        card2 = null;
+        card1.onclick = null;
+    }
 }
 
 function generate(number) {
@@ -29,7 +57,6 @@ function randomize() {
         container.appendChild(container.children[Math.random() * i | 0]);
     }
 }
+
 generate(12);
 randomize();
-
-console.log(container.children);

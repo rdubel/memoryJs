@@ -43,7 +43,6 @@ function randomize() {
         container.appendChild(container.children[Math.random() * i | 0]);
     }
 }
+
 generate(12);
 randomize();
-
-console.log(container.children);

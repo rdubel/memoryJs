@@ -8,6 +8,14 @@
     <title>Memory</title>
 </head>
 <body>
+    <div id="panel">
+        <form class="" action="index.html" method="post">
+            <h2>Difficulty level</h2>
+            <label for="difficulty" id="difficultyLabel">12</label>
+            <input name="difficulty"id="difficulty" type=range value=12 min=4 max=50 step=2>
+            <button type="button" name="button" onclick="play(dif.value)"></button>
+        </form>
+    </div>
     <ul id="board"></ul>
     <script src="./js/script.js" charset="utf-8"></script>
 </body>

@@ -1,29 +1,66 @@
+body {
+    padding-top: 8em;
+    background: url("../img/bg.jpg");
+    background-size: cover;
+    background-position: top;
+}
+
 ul {
     list-style: none;
     padding: 2em;
     width: 45%;
     margin: 3em auto;
-    background-color: rgb(7, 148, 0);
-    border: 1.5em solid rgb(172, 77, 0);
+    background: url("../img/board.jpg");
+    background-size: cover;
+    border: 1.5em solid #34210C;
     border-radius: 10px;
 }
 
 li {
-    padding: 2em;
+    padding-top: 3.1em;
+    padding-left: 0.1em;
     box-sizing: border-box;
-    background: linear-gradient(45deg, rgb(0, 41, 255), rgb(255, 138, 0));
+    background: url("../img/card.png");
+    background-size: cover;
     display: inline-block;
     border: 1px solid black;
     border-radius: 5px;
-    width: 75px;
-    height: 100px;
+    width: 82px;
+    height: 120px;
     margin: 0.5em;
     text-align: center;
     vertical-align: top;
     font-weight: bold;
+    color:
 }
 
 li.revealed {
-    background: none;
+    background: url("../img/card2.png");
+    background-size: cover;
     background-color: white;
+}
+
+#panel {
+    box-sizing: border-box;
+    padding: 1.5em;
+    margin: auto;
+    width: 374px;
+    height: 276px;
+    background: url("../img/panel.png");
+    background-size: cover;
+    text-align: center;
+}
+
+label {
+    display: block;
+}
+
+button {
+    display: block;
+    margin: auto;
+    width: 75px;
+    height: 75px;
+    background: url("../img/button.png");
+    background-size: cover;
+    border: none;
 }

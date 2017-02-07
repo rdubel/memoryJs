@@ -1,6 +1,11 @@
 var container = document.getElementById("board");
 var card1 = null;
 var card2 = null;
+var label = document.getElementById("difficultyLabel");
+var dif = document.getElementById("difficulty");
+dif.onchange = function() {
+    label.innerHTML = dif.value;
+}
 
 function reveal(card) {
     card.className = "revealed";
@@ -58,5 +63,10 @@ function randomize() {
     }
 }
 
-generate(12);
-randomize();
+function play(number) {
+    while (container.firstChild) {
+        container.removeChild(container.firstChild);
+    }
+    generate(number);
+    randomize();
+}
